@@ -6,18 +6,19 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:26:43 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 12:28:03 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/02 17:00:17 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
+/*
 static void	f(int i, char *c)
 {
 	if (*c >= 'a' && *c <= 'z')
 		*c = *c - 32;
 }
+*/
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -32,6 +33,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+
 /*
 #include <stdio.h>
 

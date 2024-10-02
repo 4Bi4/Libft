@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 15:58:32 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 12:50:07 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/02 16:27:00 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -58,3 +59,4 @@ int	main(void)
 	printf("found: %s\n :)\n", ft_strnstr(a, b, 33));
 	return (0);
 }
+*/

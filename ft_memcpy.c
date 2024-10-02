@@ -6,12 +6,11 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:01:53 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 13:10:34 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/02 16:56:23 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

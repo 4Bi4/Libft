@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 10:57:32 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 12:58:59 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/02 18:47:36 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ptr == NULL || slen < start)
 		return (NULL);
 	if (slen < start)
-	{	
+	{
 		while (i < len)
 		{
 			ptr[i] = s[start + i];
@@ -37,6 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ptr);
 }
 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -49,3 +50,4 @@ int	main(void)
 	printf("After: %s\n", ft_substr(a, start, len));
 	return (0);
 }
+*/

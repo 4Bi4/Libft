@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 13:29:42 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/09/23 19:57:56 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/02 16:55:30 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n > 0)
 	{
 		if (*subj == target)
-			return (subj);
+			return ((void *)subj);
 		n--;
 		s++;
 	}
-	return ('\0');
+	return (NULL);
 }
 
 /*

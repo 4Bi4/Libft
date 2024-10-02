@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:23:56 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/09/26 11:34:09 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/02 16:57:43 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		ft_memcpy(dest, src, src);
+		ft_memcpy(dest, src, n);
 		return (dest);
 	}
 }
