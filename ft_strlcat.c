@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 11:26:03 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/09/26 16:13:07 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:34:38 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	dstlen;
 	size_t	srclen;
+	size_t	max;
 
 	i = 0;
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
-	if (size <= 0)
-		return (srclen);
+	max = size - dstlen - 1;
 	if (size <= dstlen)
 		return (size + srclen);
-	while (dst[i] != '\0' && (i + dstlen) < size - 1)
+	while (i < max && src[i])
 	{
 		dst[dstlen + i] = src[i];
 		i++;
 	}
-	dst[srclen + i] = '\0';
+	dst[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }
 

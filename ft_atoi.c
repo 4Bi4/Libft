@@ -6,11 +6,9 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 13:25:54 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 12:39:01 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/03 20:15:58 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_atoi(char *c)
 {
@@ -21,11 +19,11 @@ int	ft_atoi(char *c)
 	i = 0;
 	a = 0;
 	sign = 1;
-	while ((c[i] > 9 && c[i] < 13) || c[i] == ' ')
+	while ((c[i] >= 9 && c[i] <= 13) || c[i] == ' ')
 	{
 		i++;
 	}
-	if (!(c[i] >= '0' && c[i] <= '9'))
+	if (c[i] == '-' || c[i] == '+')
 	{
 		if (c[i] == '-')
 		{

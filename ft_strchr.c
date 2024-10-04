@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:39:16 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/09/23 19:16:39 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:24:53 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		if (s[i] == (char)c)
+		{
+			return ((char *)&s[i]);
+		}
+		i++;
 	}
-	return (0);
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
+	return (NULL);
 }
 
 /*

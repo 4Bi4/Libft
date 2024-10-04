@@ -5,55 +5,101 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 17:35:23 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 18:32:26 by labia-fe         ###   ########.fr       */
+/*   Created: 2024/10/03 13:52:13 by labia-fe          #+#    #+#             */
+/*   Updated: 2024/10/04 17:28:26 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
 
-static int	ft_nwords(const char *s, char c)
+void	ft_freeall(char **s)
 {
 	int	i;
 
 	i = 0;
-	while (*s)
+	while (s[i])
 	{
-		if (*s == c)
-			i++;
-		s++;
-	}
-	return (i);
-}
-
-char 	**ft_split(char const *s, char c)
-{
-	return (result);
-}
-
-/*
-#include  <stdio.h>
-
-int	main(void)
-{
-	char a[] = "Hola muy buenas tardes";
-	char **b;
-	int i = 0;
-
-	printf("Before: %s\n", a);
-	b = ft_split(a, ' ');
-	printf("After: \n");
-	if (!b)
-	{
-		printf("Malloc Error :(");
-		return (1);
-	}
-	while (b[i])
-	{
-		printf("%s\n", b[i]);
+		free(s[i]);
 		i++;
 	}
+	free(s);
+}
+
+static int	ft_nword(char const *s, char c)
+{
+	int	i;
+	int	n;
+
+	i = 0;
+	n = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			n++;
+		i++;
+	}
+	return (n);
+}
+
+static char	*ft_getword(const char *s, char c)
+{
+	char	*buffer;
+	int		i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	buffer = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!buffer)
+		return (NULL);
+	return (buffer);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**str;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	str = malloc(sizeof(char *) * (ft_nword(s, c) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i] && j < ft_nword(s, c))
+	{
+		if (s[i] != c && s[i + 1] == c)
+		{
+			str[j] = ft_getword(s + i, c);
+			if (!str[j])
+			{
+				ft_freeall(str);
+				return (NULL);
+			}
+		}
+		i = i + ft_strlen(str[j]);
+		j++;
+	}
+	str[j] = NULL;
+	return (str);
+}
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char	*s = "Hola buenas tardes :)";
+    char	c = ' ';
+    char	**str;
+	int		i = 0;
+
+    str = ft_split(s, c);
+    while (str[i])
+    {
+        printf("%s\n", str[i]);
+		i++;
+    }
+    ft_freeall(str);
+    return (0);
 }
 */

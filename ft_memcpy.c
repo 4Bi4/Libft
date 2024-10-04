@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:01:53 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 16:56:23 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:52:06 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	dst = (unsigned char *)dest;
 	sc = (unsigned char *)src;
-	while (i < n && dst[i] != '\0')
+	if (!dest && !src)
+		return (NULL);
+	while (i < n)
 	{
 		dst[i] = sc[i];
 		i++;

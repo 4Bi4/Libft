@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 16:30:14 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 17:00:57 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:02:49 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, &s1[i], len);
+	ft_strlcpy(ptr, &s1[i], len + 1);
 	ptr[len] = '\0';
 	return (ptr);
 }

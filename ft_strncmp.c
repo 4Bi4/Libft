@@ -6,12 +6,11 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 15:55:40 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 12:39:28 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/03 19:27:29 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -26,7 +25,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		}
 		i++;
 	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (i < n && s1[i] != s2[i])
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return (0);
 }
 
 /*

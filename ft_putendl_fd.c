@@ -6,12 +6,11 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:34:32 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 12:35:01 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:47:19 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -20,7 +19,7 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, s, 1);
 		s++;
 	}
-	write(1, "\n", 1);
+	write(fd, "\n", 1);
 }
 /*
 int main(void)

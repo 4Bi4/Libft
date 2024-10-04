@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
 
 static int	ft_nlen(int n)
 {

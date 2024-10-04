@@ -6,15 +6,14 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:57:24 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/09/23 19:13:11 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:10:02 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_toupper(int c)
 {
-	c = c - 32;
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
 	return (c);
 }
 

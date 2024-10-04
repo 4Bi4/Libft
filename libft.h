@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 12:37:12 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 17:39:21 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/04 17:47:05 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(char *c);
 int		ft_isalpha(int c);
@@ -42,6 +43,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 void	ft_bzero(void *s, size_t n);
+void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
