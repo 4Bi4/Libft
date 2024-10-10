@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:52:13 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/10 10:29:54 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/10 11:28:56 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,7 @@ char	**ft_split(char const *s, char c)
 		{
 			str[j] = ft_getword(s + i, c);
 			if (!str[j])
-			{
-				ft_freeall(str);
-				return (NULL);
-			}
+				return (ft_freeall(str), NULL);
 			i = i + ft_strlen(str[j]);
 			j++;
 		}

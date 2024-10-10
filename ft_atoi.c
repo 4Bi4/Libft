@@ -6,11 +6,11 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 13:25:54 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/03 20:15:58 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/10 11:30:51 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *c)
+int	ft_atoi(const char *c)
 {
 	int	a;
 	int	i;
