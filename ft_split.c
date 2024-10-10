@@ -6,7 +6,7 @@
 /*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:52:13 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/04 17:28:26 by labia-fe         ###   ########.fr       */
+/*   Updated: 2024/10/10 10:29:54 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,16 @@ static char	*ft_getword(const char *s, char c)
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	buffer = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	buffer = malloc(sizeof(char) * (i + 1));
 	if (!buffer)
 		return (NULL);
+	i = 0;
+	while (s[i] && s[i] != c)
+	{
+		buffer[i] = s[i];
+		i++;
+	}
+	buffer[i] = '\0';
 	return (buffer);
 }
 
@@ -68,7 +75,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (s[i] && j < ft_nword(s, c))
 	{
-		if (s[i] != c && s[i + 1] == c)
+		if (s[i] != c)
 		{
 			str[j] = ft_getword(s + i, c);
 			if (!str[j])
@@ -76,13 +83,16 @@ char	**ft_split(char const *s, char c)
 				ft_freeall(str);
 				return (NULL);
 			}
+			i = i + ft_strlen(str[j]);
+			j++;
 		}
-		i = i + ft_strlen(str[j]);
-		j++;
+		else
+			i++;
 	}
 	str[j] = NULL;
 	return (str);
 }
+
 /*
 #include <stdio.h>
 
