@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
+/*   By: labia-fe <labia-fe@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 11:26:03 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/03 18:34:38 by labia-fe         ###   ########.fr       */
+/*   Updated: 2025/02/26 19:13:04 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dstlen + srclen);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char	a[] = "Hola ";
-	char	b[] = "Mundo";
+// int	main(void)
+// {
+// 	char	a[] = "Hola ";
+// 	char	b[] = "Mundo";
 
-	printf("before: %s\n", a);
-	printf("creating a string of size %ld.\n", ft_strlcat(a, b, 40));
-	printf("after: %s\n", a);
-	return (0);
-}
-*/
+// 	printf("before a: %s\n", a);
+// 	printf("before b: %s\n", b);
+// 	printf("creating a string of size %ld.\n", ft_strlcat(a, b, 40));
+// 	printf("after: %s\n", a);
+// 	return (0);
+// }

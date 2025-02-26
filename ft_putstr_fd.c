@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: labia-fe <labia-fe@student.42madrid>       +#+  +:+       +#+        */
+/*   By: labia-fe <labia-fe@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:30:39 by labia-fe          #+#    #+#             */
-/*   Updated: 2024/10/02 12:31:08 by labia-fe         ###   ########.fr       */
+/*   Updated: 2025/02/26 19:17:13 by labia-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	size_t	i;
+
+	i = 0;
+	while (s[i])
 	{
-		write(fd, s, 1);
-		s++;
+		write(fd, &s[i], 1);
+		i++;
 	}
 }
 /*

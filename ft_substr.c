@@ -38,7 +38,7 @@ int	main(void)
 {
 	const char	*a = "lorem ipsum dolor sit amet";
 	int			start = 7;
-	int			len = 10;
+	int			len = 3;
 
 	printf("Before: %s\n", a);
 	printf("After: %s\n", ft_substr(a, start, len));
